@@ -1,0 +1,11 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(55, 121, 244);
+}
