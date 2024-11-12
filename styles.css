@@ -15,6 +15,7 @@ h1{
 #content{
     display: flex;
     flex-direction: row;
+    width: 60%;
     gap: 20px;
 }
 
@@ -32,13 +33,13 @@ h1{
     width: 100%;
 }
 
-#btnPalabra{
-
-}
-
 #right{
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 10px;
+}
+
+#palabra{
+    width: 5%;
 }
