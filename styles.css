@@ -1,6 +1,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -9,4 +10,35 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(55, 121, 244);
     font-weight: bold;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+}
+
+#imgAhorcado{
+    border: 1px solid red;
+    margin: 10px;
+    width: 100%;
+}
+
+#btnPalabra{
+
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
 }
