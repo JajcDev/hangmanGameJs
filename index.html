@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game</title>
+    <title>Hangman Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="script.js">
+    <link rel="shortcut icon" href="img/game.ico" type="icon">
 </head>
 <body>
-    <h1>Hangman Game</h1>
-    <div id="content">
+    <div id="header">
+        <img src="img/title.png" alt="logo">
+    </div>
+    <form id="usersForm">
+        <div id="userInfo">
+            <label for="userName" id="lblUserName">User name:</label>
+            <input type="text" id="userName" placeholder="Name">
+        </div>
+        <div id="userAdd">
+            <button id="btnAddUser">Add user</button>
+        </div>
+    </form>
+    <table id="usersTable">
+        <thead>
+            <tr>Users</tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="gameContent">
         <div id="left">
-            <div id="imgAhorcado">
-                <img src="Imagen ahorcado" alt="">
+            <div id="imgHangman">
+                <img src="img/ahorcado0.png" alt="Image Hangman" id="img">
             </div>
-            <button id="btnPalabra">Generar Palabra</button>
+            <button id="btnGenerateWord">Generate Word</button>
         </div>
         <div id="right">
-            <label for="palabra">Escribe una letra:</label>
-            <input type="text" id="palabra">
+            <label for="word">Write a letter:</label>
+            <div id="word"></div>
             <label for="">[...]</label>
         </div>
     </div>

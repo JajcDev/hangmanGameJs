@@ -1,18 +1,66 @@
+/* Fuentes y estilos importados */
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+
+
+
 
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Rowdies";
 }
 
-h1{
+#header{
+    margin: 10px 10px 25px 10px;
+}
+
+#usersForm{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 40px 10px;
+    gap: 15px;
+    padding: 10px;
+}
+
+#userInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+#userAdd{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#lblUserName{
+    font-size: 20px;
+}
+
+#userName{
+    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(55, 121, 244);
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 5px;
 }
 
-#content{
+#btnAddUser{
+    font-family: "Rowdies";
+    background-color: #44C3C8;
+    color: azure;
+    width: 70%;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    border-style: none;
+    cursor: pointer;
+}
+
+#gameContent{
     display: flex;
     flex-direction: row;
     width: 60%;
@@ -27,10 +75,22 @@ h1{
     padding: 10px;
 }
 
-#imgAhorcado{
+#imgHangman{
     border: 1px solid red;
     margin: 10px;
     width: 100%;
+}
+
+#btnGenerateWord{
+    font-family: "Rowdies";
+    background-color: #44C3C8;
+    color: azure;
+    width: 50%;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    border-style: none;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 #right{
@@ -40,6 +100,6 @@ h1{
     padding: 10px;
 }
 
-#palabra{
+#word{
     width: 5%;
 }
