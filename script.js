@@ -1,14 +1,47 @@
 // Declaración de variables
 var tries = 0;
-let chosenWord = [];
-var userName = document.getElementById("userName");
-let users = [];
 var userIterator = 0;
-var divWord = document.getElementById("word"); 
-var btnGenerateWord = document.getElementById("btnGenerateWord");
-const btnAddUser = document.getElementById("btnAddUser");
-const img = document.getElementById("img");
-const usersTable = document.getElementById('usersTable');
+var divWord = document.getElementById('word'); 
+var btnGenerateWord = document.getElementById('btnGenerateWord');
+const userName = document.getElementById('userName');
+const btnAddUser = document.getElementById('btnAddUser');
+const tblUsers = document.getElementById('tblUsers');
+const img = document.getElementById('img');
+const frmUsers = document.getElementById("frmUsers");
+
+//Declaración de arreglos
+let users = [];
+let chosenWord = [];
+
+//Función agregar usuario
+function addUser() {
+  const newUser = userName.value;
+
+  //Comprobar que se ha escrito un nombre
+  if(!newUser) {
+    alert('Ingrese un nombre');
+    return;
+  }
+
+  //Añadir nuevos elementos a la tabla
+  const newRow = document.createElement('tr');
+  const cell = document.createElement('td');
+  cell.textContent = newUser;
+  newRow.appendChild(cell);
+  tblUsers.querySelector('tbody').appendChild(newRow);
+
+  //Limpiar el input del nombre
+  userName.value = '';
+}
+
+//Cancelar el evento por defecto del formulario
+frmUsers.addEventListener('submit', (event) => {
+  event.preventDefault();
+});
+
+
+//Agregar usuarios al juego
+btnAddUser.addEventListener('click', addUser);
 
 
 // Función de reseteo de juego
@@ -16,8 +49,8 @@ const usersTable = document.getElementById('usersTable');
 function resetGame(){
   tries = 0;
   chosenWord = [];
-  users = [];
-  userIterator = 0;
+  //users = [];
+  //userIterator = 0;
 }
 
 // Petición para palabra random de API Greenborn
@@ -39,25 +72,6 @@ function generateWord(){
     }
 })
 
-//Añadir usuarios al juego
-btnAddUser.addEventListener('click', () => {
-  // Función para añadir usuarios
-  const newUser = userName.value;
-  users.push(newUser);
-
-  const newRow = document.createElement('tr');
-  const cell = document.createElement('td');
-  cell.textContent = newUser;
-  newRow.appendChild(cell);
-  usersTable.appendChild(newRow);
-  //Limpiar el imput
-  userName.value = '';
-  /*
-  function addUser(){
-    users[userIterator] = userName;
-    userIterator++;
-  }*/
-})
 
 // Función de reducción de intentos
 function minusTries(){  

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
     <link rel="shortcut icon" href="img/game.ico" type="icon">
 </head>
 <body>
     <div id="header">
         <img src="img/title.png" alt="logo">
     </div>
-    <form id="usersForm">
+
+    <form id="frmUsers">
         <div id="userInfo">
             <label for="userName" id="lblUserName">User name:</label>
             <input type="text" id="userName" placeholder="Name">
@@ -21,13 +21,17 @@
             <button id="btnAddUser">Add user</button>
         </div>
     </form>
-    <table id="usersTable">
+
+    <table id="tblUsers">
         <thead>
-            <tr>Users</tr>
+            <tr>
+                <th>Users</th>
+            </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
+
     <div id="gameContent">
         <div id="left">
             <div id="imgHangman">
@@ -42,4 +46,6 @@
         </div>
     </div>
 </body>
+
+<script src="script.js"></script>
 </html>
