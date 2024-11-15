@@ -20,7 +20,7 @@ body{
 #frmUsers{
     display: flex;
     flex-direction: column;
-    margin: 10px 10px 40px 10px;
+    margin: 10px 10px 10px 10px;
     gap: 15px;
     padding: 10px;
 }
@@ -60,9 +60,29 @@ body{
     cursor: pointer;
 }
 
-#tlbUsers{
-    width: 60%;
+#dashBoard{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
     margin: 10px;
+    width: 100%;
+}
+
+#tblUsers{
+    background-color: grey;
+    border-radius: 10px;
+    padding: 5px;
+    width: 25%;
+    margin: 10px;
+}
+
+.new-cell{
+    background-color: #44C3C8;
+    border: 1px solid blue;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px;
 }
 
 #gameContent{
@@ -82,7 +102,7 @@ body{
 
 #imgHangman{
     border: 1px solid red;
-    margin: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 

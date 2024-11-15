@@ -13,6 +13,11 @@ const frmUsers = document.getElementById("frmUsers");
 let users = [];
 let chosenWord = [];
 
+//Cancelar el evento por defecto del formulario
+frmUsers.addEventListener('submit', (event) => {
+  event.preventDefault();
+});
+
 //Función agregar usuario
 function addUser() {
   const newUser = userName.value;
@@ -20,6 +25,7 @@ function addUser() {
   //Comprobar que se ha escrito un nombre
   if(!newUser) {
     alert('Ingrese un nombre');
+    userName.focus();
     return;
   }
 
@@ -27,18 +33,14 @@ function addUser() {
   const newRow = document.createElement('tr');
   const cell = document.createElement('td');
   cell.textContent = newUser;
+  cell.classList.add('new-cell');
   newRow.appendChild(cell);
   tblUsers.querySelector('tbody').appendChild(newRow);
 
   //Limpiar el input del nombre
   userName.value = '';
+  userName.focus();
 }
-
-//Cancelar el evento por defecto del formulario
-frmUsers.addEventListener('submit', (event) => {
-  event.preventDefault();
-});
-
 
 //Agregar usuarios al juego
 btnAddUser.addEventListener('click', addUser);

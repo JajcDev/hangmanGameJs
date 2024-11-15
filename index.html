@@ -22,29 +22,32 @@
         </div>
     </form>
 
-    <table id="tblUsers">
-        <thead>
-            <tr>
-                <th>Users</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
-    <div id="gameContent">
-        <div id="left">
-            <div id="imgHangman">
-                <img src="img/ahorcado0.png" alt="Image Hangman" id="img">
+    <div id="dashBoard">
+        <table id="tblUsers">
+            <thead>
+                <tr>
+                    <th>Users</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+        <div id="gameContent">
+            <div id="left">
+                <div id="imgHangman">
+                    <img src="img/ahorcado0.png" alt="Image Hangman" id="img">
+                </div>
+                <button id="btnGenerateWord">Generate Word</button>
             </div>
-            <button id="btnGenerateWord">Generate Word</button>
-        </div>
-        <div id="right">
-            <label for="word">Write a letter:</label>
-            <div id="word"></div>
-            <label for="">[...]</label>
+            <div id="right">
+                <label for="word">Write a letter:</label>
+                <div id="word"></div>
+                <label for="">[...]</label>
+            </div>
         </div>
     </div>
+    
 </body>
 
 <script src="script.js"></script>
