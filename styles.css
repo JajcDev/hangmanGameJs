@@ -74,20 +74,22 @@ body{
     border-radius: 10px;
     padding: 5px;
     width: 25%;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
 }
 
 .new-cell{
     background-color: #44C3C8;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     border-radius: 10px;
-    font-size: 15px;
+    cursor: pointer;
+    font-size: 15px;    
     padding: 5px;
 }
 
 #gameContent{
     display: flex;
     flex-direction: row;
+    background-color: rgb(199, 197, 197);
     width: 60%;
     gap: 20px;
 }

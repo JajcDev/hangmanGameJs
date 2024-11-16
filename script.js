@@ -7,13 +7,15 @@ const userName = document.getElementById('userName');
 const btnAddUser = document.getElementById('btnAddUser');
 const tblUsers = document.getElementById('tblUsers');
 const img = document.getElementById('img');
-const frmUsers = document.getElementById("frmUsers");
+const frmUsers = document.getElementById('frmUsers');
+const tbUsersList = document.getElementById('tbUsersList');
+const gameContent = document.getElementById('gameContent');
 
 //Declaración de arreglos
 let users = [];
 let chosenWord = [];
 
-//Cancelar el evento por defecto del formulario
+//Cancelar el evento por defecto del formulario al enviar información 
 frmUsers.addEventListener('submit', (event) => {
   event.preventDefault();
 });
@@ -45,9 +47,15 @@ function addUser() {
 //Agregar usuarios al juego
 btnAddUser.addEventListener('click', addUser);
 
+tbUsersList.addEventListener('click', (event) => {
+  const selectedUser = event.target.textContent;
+
+  gameContent.textContent = `Juego para ${selectedUser}`;
+})
+
+
 
 // Función de reseteo de juego
-
 function resetGame(){
   tries = 0;
   chosenWord = [];
